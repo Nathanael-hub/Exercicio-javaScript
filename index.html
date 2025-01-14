@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio da JavaScript</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de valores</h1>
+        <form id="form-saque">
+            <input type="number" id="valor-A" required placeholder="Valor que você deseja sacar" />
+            <p class="error-message">
+                No momento você não detém o valor que deseja sacar
+            </p>
+            <input type="number" id="valor-B" required placeholder="Valor que você retém" />
+            <button id="btn-sacar" type="submit">Sacar</button>
+        </form>
+        <p class="success-message"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
