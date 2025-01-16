@@ -4,8 +4,7 @@ const form = document.getElementById('form-saque');
 const btn = document.getElementById('btn-sacar');
 
 function saqueAceito(valorA,valorB) {
-if (valorA < valorB) {
-    }
+return parseFloat(valorB) >= parseFloat(valorA);  
 }
 
 form.addEventListener('submit', function(e) {
@@ -18,7 +17,7 @@ form.addEventListener('submit', function(e) {
     console.log(sucessMens)
 
 
-    formEValido = saqueAceito(vValorB.value)
+    formEValido = saqueAceito(vValorA, vValorB)
     if(formEValido) {
         const containerMensSucess = document.querySelector('.success-message');
         containerMensSucess.innerHTML = sucessMens;
@@ -35,7 +34,7 @@ form.addEventListener('submit', function(e) {
 
 valorB.addEventListener('keyup', function(e) {
     console.log(e.target.value);
-    formEValido = saqueAceito(e.target.value);
+    formEValido = saqueAceito(valorA.value, e.target.value);
 
     if (!formEValido) {
         valorB.classList.add('error');
